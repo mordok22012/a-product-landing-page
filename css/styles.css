@@ -38,8 +38,12 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--main-bg-color);
+  color: var(--main-font-color);
   font-size: 1.8rem;
+}
+
+a:hover {
+  color: var(--btn);
 }
 
 .btn {
@@ -67,6 +71,8 @@ a {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* Header*/
@@ -136,6 +142,7 @@ a {
   display: flex;
   margin-top: 100px;
   margin-bottom: 40px;
+  padding: 0 14px;
 }
 
 #features .grid {
@@ -143,6 +150,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
 }
 
 #features .icon {
@@ -247,6 +255,7 @@ a {
 footer {
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin-top: 30px;
   padding: 20px;
   background-color: var(--footer);
@@ -267,4 +276,60 @@ footer > span {
   font-size: 0.9em;
   margin-top: 5px;
   color: var(--main-font-color);
+}
+
+/*max-width: 640px*/
+@media (max-width: 640px) {
+  #features {
+    flex-direction: column;
+  }
+
+  #features > .grid {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #pricing {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .product {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .product > ol {
+    text-align: left;
+    width: 80%;
+  }
+}
+
+/*max-width: 500px*/
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo-container {
+    margin-top: 8px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  #nav-bar {
+    display: none;
+  }
+
+  #how-it-works > iframe {
+    max-width: 460px;
+    width: 100%;
+    height: 315px;
+  }
 }
