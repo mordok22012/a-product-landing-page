@@ -95,11 +95,9 @@ a:hover {
   align-items: center;
 }
 
-.logo-container .icon {
-  display: flex;
+.logo-container img {
   padding-top: 10px;
-  align-items: flex-end;
-  justify-content: center;
+
   height: 50px;
   width: 10vw;
   background-color: var(--titles-and-icons);
@@ -324,9 +322,11 @@ footer > span {
   }
 
   #nav-bar {
-    display: none;
+    width: 100%;
+    display: flex;
+    justify-content: first baseline;
+    margin-left: 20px;
   }
-
   #how-it-works > iframe {
     max-width: 460px;
     width: 100%;
